@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-primary{
+    color: #4844bc;
+}
+
+.text-second{
+    color: #ff7404;
+}
+
+.btn-main{
+    color: #fff;
+    background-color: #4844bc;
+    border-radius: 8px;
+}
