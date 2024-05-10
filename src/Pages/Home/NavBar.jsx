@@ -1,7 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/icon.png'
+import useAuth from "../../Hooks/useAuth";
 
 const NavBar = () => {
+  const { user, logOut } = useAuth();
+ console.log(user)
+  const handleLogOut = () => {
+    logOut()
+    .then()
+    .catch()
+  }
     return (
       <div>
         {/* #4844bc #ff7404 */}
@@ -34,6 +42,18 @@ const NavBar = () => {
               >
                 <li>
                   <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                        : "text-[#4844bc] text-base font-medium"
+                    }
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
                     className={({ isActive }) =>
                       isActive
                         ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
@@ -43,55 +63,57 @@ const NavBar = () => {
                     Services
                   </NavLink>
                 </li>
-                <li>
-                  <a className="text-second font-medium">Dashboard</a>
-                  <ul className="p-1 space-y-1">
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
-                            : "text-[#4844bc] text-base font-medium"
-                        }
-                      >
-                        Add Service
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
-                            : "text-[#4844bc] text-base font-medium"
-                        }
-                      >
-                        Manage Service
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
-                            : "text-[#4844bc] text-base font-medium"
-                        }
-                      >
-                        Booked-Services
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
-                            : "text-[#4844bc] text-base font-medium"
-                        }
-                      >
-                        Service-To-Do
-                      </NavLink>
-                    </li>
-                  </ul>
-                </li>
+                {user && (
+                  <li>
+                    <a className="text-second font-medium">Dashboard</a>
+                    <ul className="p-1 space-y-1">
+                      <li>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                              : "text-[#4844bc] text-base font-medium"
+                          }
+                        >
+                          Add Service
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                              : "text-[#4844bc] text-base font-medium"
+                          }
+                        >
+                          Manage Service
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                              : "text-[#4844bc] text-base font-medium"
+                          }
+                        >
+                          Booked-Services
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                              : "text-[#4844bc] text-base font-medium"
+                          }
+                        >
+                          Service-To-Do
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </li>
+                )}
               </ul>
             </div>
             <Link to="/">
@@ -107,6 +129,18 @@ const NavBar = () => {
             <ul className="menu menu-horizontal px-1">
               <li>
                 <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "font-medium text-base p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                      : "text-[#4844bc] text-base font-medium"
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   className={({ isActive }) =>
                     isActive
                       ? "font-medium text-base p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
@@ -117,62 +151,88 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li>
-                <details>
-                  <summary className="text-[#ff7404] font-medium text-base">
-                    Dashboard
-                  </summary>
-                  <ul className="p-1 space-y-1">
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
-                            : "text-[#4844bc] text-base font-medium"
-                        }
-                      >
-                        Add Service
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
-                            : "text-[#4844bc] text-base font-medium"
-                        }
-                      >
-                        Manage Service
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
-                            : "text-[#4844bc] text-base font-medium"
-                        }
-                      >
-                        Booked-Services
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
-                            : "text-[#4844bc] text-base font-medium"
-                        }
-                      >
-                        Service-To-Do
-                      </NavLink>
-                    </li>
-                  </ul>
-                </details>
+                {user && (
+                  <details>
+                    <summary className="text-[#ff7404] font-medium text-base">
+                      Dashboard
+                    </summary>
+                    <ul className="space-y-1">
+                      <li>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                              : "text-[#4844bc] text-base font-medium"
+                          }
+                        >
+                          Add Service
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                              : "text-[#4844bc] text-base font-medium"
+                          }
+                        >
+                          Manage Service
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                              : "text-[#4844bc] text-base font-medium"
+                          }
+                        >
+                          Booked-Services
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                              : "text-[#4844bc] text-base font-medium"
+                          }
+                        >
+                          Service-To-Do
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </details>
+                )}
               </li>
             </ul>
           </div>
           <div className="navbar-end">
-            <Link to='/login' className="btn btn-main hover:bg-[#ff7404]">Log In</Link>
+            {user ? (
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full">
+                    <img alt="User Photo" src={user?.photoURL} />
+                  </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <button onClick={handleLogOut}>Logout</button>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <Link to="/login" className="btn btn-main hover:bg-[#ff7404]">
+                Log In
+              </Link>
+            )}
           </div>
         </div>
       </div>
