@@ -14,7 +14,10 @@ const PopularService = () => {
     },[])
     return (
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 my-20">
+        <div>
+          <h2 className="text-primary font-bold text-3xl mt-20 mb-10 text-center">Our Popular Services</h2>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 mb-20">
           {services.map((service) => (
             <PopularServiceCard
               service={service}

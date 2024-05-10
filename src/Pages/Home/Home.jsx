@@ -1,19 +1,17 @@
-import Footer from "../Shared/Footer/Footer";
 import Banner from "./Banner";
-import NavBar from "./NavBar/NavBar"
+import NavBar from "./NavBar/NavBar";
+import OurSpecalist from "./OurSpecalist";
 import PopularService from "./PopularService";
 
 const Home = () => {
-    return (
-      <div>
-        <div>
-          <NavBar />
-        </div>
-        <Banner />
-        <PopularService/>
-        <Footer />
-      </div>
-    );
+  return (
+    <div>
+      <NavBar />
+      <Banner />
+      <PopularService />
+      <OurSpecalist />
+    </div>
+  );
 };
 
 export default Home;
