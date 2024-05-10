@@ -1,0 +1,50 @@
+[
+    {
+        "serviceImage": "https://i.ibb.co/8s1WsVz/diagnosis-9733608.png",
+        "serviceName": "General Checkup",
+        "serviceDescription": "The Check-up or general health test includes all the basic laboratory tests and a doctor’s opinion to broadly know the state of your health and thus be able to timely detect important diseases such as hypertension, cancer, or diabetes, among others. There are different types of Check-ups depending on certain profiles, for example: for men, women, pregnant women, in climacteric or menopause, people with a tendency to heart problems, thyroid problems, children, adolescents, among others",
+        "serviceProviderImage": "https://i.ibb.co/25qtD73/nurse.jpg",
+        "serviceProviderName": "Dr. Jane Smith",
+        "servicePrice": "$80"
+    },
+    {
+        "serviceImage": "https://i.ibb.co/yhsG0tq/dry-skin-7312472.png",
+        "serviceName": "Dermatology",
+        "serviceDescription": "A number of procedures can be performed by catheterisation of heart and vessels-the coronary artery, peripheral artery or vein, the renal artery, although the most common is the coronary artery. It involves insertion of a sheath into the radial or femoral artery and cannulate the heart under the x-ray vision (fluoroscopy). The radial artery has the advantage of an easy control of bleeding in anti-coagulated patients and increased comfort levels as early mobilisation is possible.",
+        "serviceProviderImage": "https://i.ibb.co/tZwt2FK/doctor.jpg",
+        "serviceProviderName": "Dr. John Miller",
+        "servicePrice": "$95"
+    },
+    {
+        "serviceImage": "https://i.ibb.co/Xt011gY/mental-health-15192783.png",
+        "serviceName": "Mental Health",
+        "serviceDescription": "A full schedule can make it challenging to get the help you need when you’re ready. The best time to consider mental health support is before you’re overwhelmed with depression, anxiety, addiction or other mental health concerns.",
+        "serviceProviderImage": "https://i.ibb.co/25qtD73/nurse.jpg",
+        "serviceProviderName": "Dr. Emily Green",
+        "servicePrice": "$120"
+    },
+    {
+        "serviceImage": "https://i.ibb.co/zhwvSWZ/pulmonology-14949220.png",
+        "serviceName": "Pulmonology",
+        "serviceDescription": "A number of procedures can be performed by catheterisation of heart and vessels-the coronary artery, peripheral artery or vein, the renal artery, although the most common is the coronary artery. It involves insertion of a sheath into the radial or femoral artery and cannulate the heart under the x-ray vision (fluoroscopy). The radial artery has the advantage of an easy control of bleeding in anti-coagulated patients and increased comfort levels as early mobilisation is possible",
+        "serviceProviderImage": "https://i.ibb.co/tZwt2FK/doctor.jpg",
+        "serviceProviderName": "Dr. Robert White",
+        "servicePrice": "$100"
+    },
+    {
+        "serviceImage": "https://i.ibb.co/q15JNdX/broken-bone-7549901.png",
+        "serviceName": "Orthopedic",
+        "serviceDescription": "The Department of Orthopaedics offers out-patient consultation services and procedures. It is well supported by fully equipped operation theatre (OT), intensive care units for pre- and post- operative care, as well as rehabilitation services in Physical Medicine & Rehabilitation Centre. The state-of-the-art OT is equipped with the latest fracture tables and imaging facilities including a C-arm image intensifier. The hospital is also equipped with CT scan (64 slice), MRI Scan (1.5 tesla), and X-ray for prompt screening facilities. The theatre is scrupulously maintained such that the infection rate is always near zero",
+        "serviceProviderImage": "https://i.ibb.co/25qtD73/nurse.jpg",
+        "serviceProviderName": "Dr. Laura Adams",
+        "servicePrice": "$110"
+    },
+    {
+        "serviceImage": "https://i.ibb.co/VgBrt74/medical-1566512.png",
+        "serviceName": "Cardiology",
+        "serviceDescription": "The Cardiology Department of Evercare Hospital Dhaka has gained reputation for its dynamic and innovation in the diagnosis, investigation and treatment of patients with all forms of heart diseases, both generally encountered and complex cases. We have a dedicated unit of full-time Consultants, and a team of junior doctors, nurses, and technicians trained to the highest standard in cardiac assessment.",
+        "serviceProviderImage": "https://i.ibb.co/tZwt2FK/doctor.jpg",
+        "serviceProviderName": "Dr. Mark Johnson",
+        "servicePrice": "$130"
+    }
+]

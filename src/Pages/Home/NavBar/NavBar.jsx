@@ -244,7 +244,12 @@ const NavBar = () => {
                   className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <button onClick={handleLogOut}>Logout</button>
+                    <button
+                      onClick={handleLogOut}
+                      className="font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                    >
+                      Logout
+                    </button>
                   </li>
                 </ul>
               </div>
