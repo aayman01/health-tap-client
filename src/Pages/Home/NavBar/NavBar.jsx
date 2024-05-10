@@ -1,19 +1,39 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../../assets/icon.png'
-import useAuth from "../../Hooks/useAuth";
+import logo from '../../../assets/icon.png'
+import useAuth from "../../../Hooks/useAuth";
+import { useState } from "react";
+import '../NavBar/NavBar.css';
 
 const NavBar = () => {
   const { user, logOut } = useAuth();
- console.log(user)
+  const [fix, setFix] = useState(false)
+  console.log(user)
+
+  const onScrollChange = () => {
+    if (window.scrollY >= 200) {
+      setFix(true);
+    } else {
+      setFix(false);
+    }
+  };
+
+  window.addEventListener("scroll", onScrollChange);
+
   const handleLogOut = () => {
     logOut()
     .then()
     .catch()
   }
     return (
-      <div className="max-6xl mx-auto px-4">
+      <div className="max-7xl mx-auto">
         {/* #4844bc #ff7404 */}
-        <div className="navbar ml-0 pl-0">
+        <div
+          className={
+            fix
+              ? "newFixed navbar fixed z-10 mb-7 px-4"
+              : "navbar mt-3 fixed z-10 mb-7 px-4"
+          }
+        >
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -209,7 +229,7 @@ const NavBar = () => {
           </div>
           <div className="navbar-end">
             {user ? (
-              <div className="dropdown dropdown-end">
+              <div className="dropdown dropdown-end mr-4">
                 <div
                   tabIndex={0}
                   role="button"
@@ -229,7 +249,10 @@ const NavBar = () => {
                 </ul>
               </div>
             ) : (
-              <Link to="/login" className="btn btn-main hover:bg-[#ff7404]">
+              <Link
+                to="/login"
+                className="btn btn-main mr-4 hover:bg-[#ff7404]"
+              >
                 Log In
               </Link>
             )}
