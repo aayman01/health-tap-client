@@ -7,10 +7,9 @@ import '../NavBar/NavBar.css';
 const NavBar = () => {
   const { user, logOut } = useAuth();
   const [fix, setFix] = useState(false)
-  console.log(user)
-
+  
   const onScrollChange = () => {
-    if (window.scrollY >= 200) {
+    if (window.scrollY >= 100) {
       setFix(true);
     } else {
       setFix(false);
