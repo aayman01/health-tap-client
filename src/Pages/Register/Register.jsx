@@ -1,7 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/xj_3gkQFD.png'
+import { FcGoogle } from 'react-icons/fc';
+import useAuth from '../../Hooks/useAuth';
+import { updateProfile } from 'firebase/auth';
+import toast, { Toaster } from 'react-hot-toast';
 const Register = () => {
-
+    const { createUser, googleLogIn } = useAuth();
+    const navigate = useNavigate();
+    
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
@@ -9,9 +15,37 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photoUrl = form.photoUrl.value;
-        const user = {name, email, password,photoUrl}
-        console.log(user)
+        
+        createUser(email, password)
+          .then((result) => {
+            updateProfile(result.user, {
+              displayName: name,
+              photoURL: photoUrl,
+            })
+              .then((result) => console.log(result))
+              .catch();
+            toast.success("Successfully registered!");
+            setTimeout(() => navigate("/login"), 1500);
+          })
+          .catch((error) => {
+            toast.error(error.message);
+          });    
     }
+
+    const handleGoogleLogin = () => {
+      googleLogIn()
+        .then((result) => {
+            console.log(result)
+          toast.success("Successfully logged in!");
+          setTimeout(
+            () => navigate(location?.state ? location.state : "/"),
+            1500
+          );
+        })
+        .catch((error) => {
+          toast.error(error.message);
+        });
+    };
     return (
       <div className="max-w-6xl mx-auto px-4">
         <div className="hero min-h-screen">
@@ -80,7 +114,14 @@ const Register = () => {
                   />
                 </div>
               </form>
-              
+              <p className="text-center text-black mb-4 font-medium">
+                -Or Register with-
+              </p>
+              <div className="flex text-2xl items-center gap-3 justify-center">
+                <button onClick={handleGoogleLogin}>
+                  <FcGoogle />
+                </button>
+              </div>
               <p className="text-center text-black mt-4 pb-10 font-medium">
                 Already have an account?
                 <Link
@@ -91,6 +132,7 @@ const Register = () => {
                   Please Login
                 </Link>{" "}
               </p>
+              <Toaster position="top-right" reverseOrder={false} />
             </div>
           </div>
         </div>

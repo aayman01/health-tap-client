@@ -1,19 +1,53 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/xj_3gkQFD.png'
-import { FaGithub } from 'react-icons/fa6';
 import { FcGoogle } from 'react-icons/fc';
+import useAuth from '../../Hooks/useAuth';
+import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
+    const { user,signInUser, googleLogIn } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
 
+    console.log(user)
     const handleSubmit = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         const user = {email, password}
         console.log(user)
+
+        signInUser(email, password)
+          .then((result) => {
+            console.log(result)
+            toast.success("Successfully logged in!");
+            setTimeout(
+              () => navigate(location?.state ? location.state : "/"),
+              1500
+            );
+          })
+          .catch((error) => {
+            toast(error.code);
+          });
     }
 
+    const handleGoogleLogin = () => {
+      googleLogIn()
+        .then((result) => {
+            console.log(result)
+          toast.success("Successfully logged in!");
+          setTimeout(
+            () => navigate(location?.state ? location.state : "/"),
+            1500
+          );
+        })
+        .catch((error) => {
+            console.log(error)
+          toast.error(error.message);
+        });
+    };
+
     return (
-      <div className='max-w-6xl mx-auto px-4'>
+      <div className="max-w-6xl mx-auto px-4">
         <div className="hero min-h-screen">
           <div className="hero-content flex-col lg:flex-row gap-10">
             <div className="w-1/2">
@@ -65,11 +99,8 @@ const Login = () => {
                 -Or login with-
               </p>
               <div className="flex text-2xl items-center gap-3 justify-center">
-                <button>
+                <button onClick={handleGoogleLogin}>
                   <FcGoogle />
-                </button>
-                <button>
-                  <FaGithub />
                 </button>
               </div>
               <p className="text-center text-black mt-4 pb-10 font-medium">
@@ -82,6 +113,7 @@ const Login = () => {
                   Register
                 </Link>{" "}
               </p>
+              <Toaster position="top-right" reverseOrder={false} />
             </div>
           </div>
         </div>
