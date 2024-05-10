@@ -11,7 +11,7 @@ const NavBar = () => {
     .catch()
   }
     return (
-      <div>
+      <div className="max-6xl mx-auto px-4">
         {/* #4844bc #ff7404 */}
         <div className="navbar ml-0 pl-0">
           <div className="navbar-start">
