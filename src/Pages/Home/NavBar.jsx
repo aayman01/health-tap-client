@@ -172,7 +172,7 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="btn btn-main hover:bg-[#ff7404]">Log In</a>
+            <Link to='/login' className="btn btn-main hover:bg-[#ff7404]">Log In</Link>
           </div>
         </div>
       </div>
