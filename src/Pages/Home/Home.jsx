@@ -1,3 +1,4 @@
+import Appointment from "./Appointment";
 import Banner from "./Banner";
 import NavBar from "./NavBar/NavBar";
 import OurSpecalist from "./OurSpecalist";
@@ -10,6 +11,7 @@ const Home = () => {
       <Banner />
       <PopularService />
       <OurSpecalist />
+      <Appointment/>
     </div>
   );
 };
