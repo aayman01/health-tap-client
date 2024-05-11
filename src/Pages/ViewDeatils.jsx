@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import NavBar from "./Home/NavBar/NavBar";
 import { VscDebugBreakpointData } from "react-icons/vsc";
 
@@ -57,19 +57,35 @@ const ViewDeatils = () => {
               {allData[0].serviceDescription}
             </span>
           </div>
-          <div className="flex items-center mt-3">
-            <div className="flex items-center">
-              <VscDebugBreakpointData className="text-primary " />
-              <h2 className="underline decoration-[#ff7404] text-primary font-bold text-2xl ">
-                Price:
-              </h2>
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center mt-3">
+              <div className="flex items-center">
+                <VscDebugBreakpointData className="text-primary " />
+                <h2 className="underline decoration-[#ff7404] text-primary font-bold text-2xl ">
+                  Service provided by:
+                </h2>
+              </div>
+              <p className="text-[#ff7404] text-xl font-bold">
+                {allData[0]?.serviceProviderName}
+              </p>
             </div>
-            <p className="text-[#ff7404] text-xl font-bold">
-              {allData[0].servicePrice}
-            </p>
+            <div className="flex items-center mt-3 mr-5">
+              <div className="flex items-center">
+                <VscDebugBreakpointData className="text-primary " />
+                <h2 className="underline decoration-[#ff7404] text-primary font-bold text-2xl ">
+                  Price:
+                </h2>
+              </div>
+              <p className="text-[#ff7404] text-xl font-bold">
+                {allData[0].servicePrice}
+              </p>
+            </div>
           </div>
           <div className="mb-16 mt-10">
-            <button className="btn btn-main w-full">Book Now</button>
+            <Link to={`/bookconfirm/${allData[0]?._id}`}>
+              <button className="btn btn-main w-full">Book Now</button>
+            </Link>
           </div>
         </div>
       </div>

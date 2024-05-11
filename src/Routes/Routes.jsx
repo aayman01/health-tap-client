@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ViewDeatils from "../Pages/ViewDeatils";
+import BookConfrom from "../Pages/BookConfrom";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,14 @@ const router = createBrowserRouter([
       {
         path: "/viewdeatils/:id",
         element: <ViewDeatils />,
-        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
+      },
+      {
+        path: "/bookconfirm/:id",
+        element: <BookConfrom />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
       },
     ],
   },

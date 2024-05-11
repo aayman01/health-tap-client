@@ -3,7 +3,7 @@ import phone from '../../assets/phone.png'
 const Appointment = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 my-16">
-      <div className="flex items-center justify-between gap-6">
+      <div className="md:flex items-center justify-between gap-6">
         <section className="p-6 bg-white rounded-md shadow-xl">
           <h2 className="text-5xl font-bold text-primary mb-4">
             Make an Appointment
@@ -95,11 +95,11 @@ const Appointment = () => {
             </div>
           </form>
         </section>
-        <p className="text-xl text-gray-400">- Or -</p>
-        <div>
+        <p className="text-xl text-gray-400 text-center mt-4">Or</p>
+        <div className='flex flex-col justify-center items-center'>
           <img className="w-[200px] h-[200px]" src={phone} alt="" />
-          <p className='text-primary font-bold text-4xl'>+ (01) 335 780 65</p>
-          <p className='text-gray-400 mt-2'>Need more information? call this number.</p>
+          <p className='text-primary font-bold text-4xl text-center'>+ (01) 335 780 65</p>
+          <p className='text-gray-400 mt-2 text-center'>Need more information? call this number.</p>
         </div>
       </div>
     </div>
