@@ -5,6 +5,8 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ViewDeatils from "../Pages/ViewDeatils";
 import BookConfrom from "../Pages/BookConfrom";
+import PrivateRoute from "./PrivateRoute";
+import AllServices from "../Pages/AllServices";
 
 const router = createBrowserRouter([
   {
@@ -24,8 +26,16 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+        path: '/services',
+        element: <AllServices/>
+      },
+      {
         path: "/viewdeatils/:id",
-        element: <ViewDeatils />,
+        element: (
+          <PrivateRoute>
+            <ViewDeatils />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/services/${params.id}`),
       },
