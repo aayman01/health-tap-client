@@ -4,12 +4,12 @@ const Appointment = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 my-16">
       <div className="md:flex items-center justify-between gap-6">
-        <section className="p-6 bg-white rounded-md shadow-xl">
+        <section className="p-6 bg-white rounded-md shadow-2xl bg-inherit">
           <h2 className="text-5xl font-bold text-primary mb-4">
             Make an Appointment
           </h2>
 
-          <form>
+          <form className="">
             <div className="grid grid-cols-1 gap-6 mt-4 lg:grid-cols-3">
               <div>
                 <label className="form-control">
@@ -88,16 +88,19 @@ const Appointment = () => {
                   required
                 />
               </label>
-              <div>
-                <label className="text-black">Set Time:</label>
+              <label className="form-control">
+                <div className="label">
+                  <span className="label-text font-bold">Set Time:</span>
+                </div>
                 <input
-                  id="passwordConfirmation"
                   type="time"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring"
+                  name="time"
+                  placeholder="Set time"
+                  className="input input-bordered w-full"
+                  required
                 />
-              </div>
+              </label>
             </div>
-
             <div className="flex justify-end mt-6">
               <button className="btn btn-main hover:bg-[#ff7404]">
                 Make An Appointment
