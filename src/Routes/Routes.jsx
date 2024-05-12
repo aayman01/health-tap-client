@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllServices from "../Pages/AllServices";
 import AddServices from "../Pages/AddServices";
 import ProviderViewDeatils from "../Pages/ProviderViewDeatils";
+import ManageService from "../Pages/ManageService";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,14 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/allServiceProvider/${params.id}`),
+      },
+      {
+        path: "/manageservice",
+        element: (
+          <PrivateRoute>
+            <ManageService />
+          </PrivateRoute>
+        ),
       },
     ],
   },
