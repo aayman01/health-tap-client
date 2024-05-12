@@ -21,7 +21,7 @@ const PopularServiceCard = ({ service }) => {
             alt="service image"
           />
         </div>
-        <div className="p-6">
+        <div className="p-6 card">
           <div>
             <h3 className="text-second font-bold text-2xl">{serviceName}</h3>
             <p className="mt-2 text-sm text-gray-400">

@@ -32,7 +32,7 @@ const AddServices = () => {
           serviceProviderEmail,
         };
 
-        console.log(data);
+        // console.log(data);
 
         axios.post("http://localhost:5000/serviceProvider",data)
         .then(res => {

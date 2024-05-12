@@ -51,33 +51,43 @@ const Appointment = () => {
                   <option value="Gastroenterology">Gastroenterology</option>
                 </select>
               </label>
-              <div>
-                <label className="text-black ">Your Name:</label>
+
+              <label className="form-control">
+                <div className="label">
+                  <span className="label-text font-bold">Your Name:</span>
+                </div>
                 <input
+                  type="text"
+                  name="servicePrice"
                   placeholder="Your Name"
-                  type="text"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:outline-none focus:ring"
+                  className="input input-bordered w-full"
+                  required
                 />
-              </div>
-
-              <div>
-                <label className="text-black">Your mobile:</label>
+              </label>
+              <label className="form-control">
+                <div className="label">
+                  <span className="label-text font-bold">Your mobile:</span>
+                </div>
                 <input
-                  placeholder="Your Mobile"
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring"
+                  name="mobile"
+                  placeholder="Your mobile"
+                  className="input input-bordered w-full"
+                  required
                 />
-              </div>
-
-              <div>
-                <label className="text-black">Set Date:</label>
+              </label>
+              <label className="form-control">
+                <div className="label">
+                  <span className="label-text font-bold">Set date:</span>
+                </div>
                 <input
-                  id="password"
                   type="date"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring"
+                  name="date"
+                  placeholder="Set date"
+                  className="input input-bordered w-full"
+                  required
                 />
-              </div>
-
+              </label>
               <div>
                 <label className="text-black">Set Time:</label>
                 <input
@@ -96,10 +106,14 @@ const Appointment = () => {
           </form>
         </section>
         <p className="text-xl text-gray-400 text-center mt-4">Or</p>
-        <div className='flex flex-col justify-center items-center'>
+        <div className="flex flex-col justify-center items-center">
           <img className="w-[200px] h-[200px]" src={phone} alt="" />
-          <p className='text-primary font-bold text-4xl text-center'>+ (01) 335 780 65</p>
-          <p className='text-gray-400 mt-2 text-center'>Need more information? call this number.</p>
+          <p className="text-primary font-bold text-4xl text-center">
+            + (01) 335 780 65
+          </p>
+          <p className="text-gray-400 mt-2 text-center">
+            Need more information? call this number.
+          </p>
         </div>
       </div>
     </div>

@@ -58,7 +58,7 @@ const ViewDeatils = () => {
             </span>
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex-col md:flex items-center justify-between">
             <div className="flex items-center mt-3">
               <div className="flex items-center">
                 <VscDebugBreakpointData className="text-primary " />
