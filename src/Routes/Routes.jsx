@@ -10,11 +10,13 @@ import AllServices from "../Pages/AllServices";
 import AddServices from "../Pages/AddServices";
 import ProviderViewDeatils from "../Pages/ProviderViewDeatils";
 import ManageService from "../Pages/ManageService";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
