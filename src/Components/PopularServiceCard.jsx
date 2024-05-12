@@ -12,7 +12,7 @@ const PopularServiceCard = ({ service }) => {
     servicePrice,
   } = service;
   return (
-    <div className="max-w-2xl overflow-hidden bg-white bg-inherit rounded-lg shadow-2xl">
+    <div className="max-w-2xl overflow-hidden bg-inherit rounded-lg shadow-2xl">
       <div className="flex items-center">
         <div className="">
           <img

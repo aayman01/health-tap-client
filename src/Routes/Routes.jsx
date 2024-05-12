@@ -8,6 +8,7 @@ import BookConfrom from "../Pages/BookConfrom";
 import PrivateRoute from "./PrivateRoute";
 import AllServices from "../Pages/AllServices";
 import AddServices from "../Pages/AddServices";
+import ProviderViewDeatils from "../Pages/ProviderViewDeatils";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,16 @@ const router = createBrowserRouter([
         element: <BookConfrom />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/services/${params.id}`),
+      },
+      {
+        path: "/providerViewDeatils/:id",
+        element: (
+          <PrivateRoute>
+            <ProviderViewDeatils />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allServiceProvider/${params.id}`),
       },
     ],
   },

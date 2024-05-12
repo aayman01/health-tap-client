@@ -17,7 +17,7 @@ const Appointment = () => {
                     <span className="label-text font-bold">Select Doctor:</span>
                   </div>
                   <select
-                    className="px-4 py-3 rounded-md border w-full"
+                    className="px-4 py-3 input input-bordered rounded-md border w-full"
                     name="doctorName"
                     required
                   >
@@ -39,7 +39,7 @@ const Appointment = () => {
                   </span>
                 </div>
                 <select
-                  className="px-4 py-3 rounded-md border w-full"
+                  className="px-4 py-3 input input-bordered rounded-md border w-full"
                   name="department"
                   required
                 >
