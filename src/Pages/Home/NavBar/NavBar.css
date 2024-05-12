@@ -1,6 +1,6 @@
 .newFixed {
     background-color: white;
-    transition: 0.7s ease-in;
+    transition: 0.7s ease-in-out;
 }
 
 .li {

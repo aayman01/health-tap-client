@@ -22,7 +22,7 @@ const BookConfrom = () => {
         const userName = form.userName.value;
         const date = form.date.value;
         const area = form.area.value;
-        const price = form.area.value;
+        const price = form.price.value;
         const serviceStatus = "pending"
         const data = {
           serviceName,
@@ -173,7 +173,7 @@ const BookConfrom = () => {
                       defaultValue={user?.displayName}
                       placeholder="Enter coffee Category"
                       className="input input-bordered w-full"
-                      required
+                      readOnly
                     />
                   </label>
                   <label className="form-control md:w-1/2">

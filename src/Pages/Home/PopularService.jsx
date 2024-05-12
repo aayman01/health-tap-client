@@ -4,7 +4,7 @@ import PopularServiceCard from "../../Components/PopularServiceCard";
 
 const PopularService = () => {
     const [services, setServices] = useState([]);
-    console.log(services)
+    // console.log(services)
     useEffect(()=>{
         axios
           .get("http://localhost:5000/services")

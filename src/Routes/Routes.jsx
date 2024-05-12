@@ -7,6 +7,7 @@ import ViewDeatils from "../Pages/ViewDeatils";
 import BookConfrom from "../Pages/BookConfrom";
 import PrivateRoute from "./PrivateRoute";
 import AllServices from "../Pages/AllServices";
+import AddServices from "../Pages/AddServices";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +27,16 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: '/services',
-        element: <AllServices/>
+        path: "/services",
+        element: <AllServices />,
+      },
+      {
+        path: "/addservice",
+        element: (
+          <PrivateRoute>
+            <AddServices />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/viewdeatils/:id",
