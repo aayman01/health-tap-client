@@ -86,6 +86,7 @@ const AddServices = () => {
                     <select
                       className="px-4 py-3 rounded-md border w-full"
                       name="serviceName"
+                      value={"Select your service name"}
                       required
                     >
                       <option value="Dermatology">Dermatology</option>
@@ -132,7 +133,7 @@ const AddServices = () => {
                   </div>
                   <textarea
                     placeholder="Description"
-                    className="textarea textarea-bordered w-full"
+                    className="textarea textarea-lg textarea-bordered w-full"
                     name="description"
                   ></textarea>
                 </label>
