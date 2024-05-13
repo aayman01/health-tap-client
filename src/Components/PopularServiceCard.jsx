@@ -16,7 +16,7 @@ const PopularServiceCard = ({ service }) => {
       <div className="flex items-center">
         <div className="">
           <img
-            className="rounded-sm object-cover ml-3 w-24 h-28"
+            className="rounded-sm object-cover ml-3 w-32 h-28"
             src={serviceImage}
             alt="service image"
           />

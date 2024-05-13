@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import img from '../../assets/xj_3gkQFD.png'
+import img from '../../assets/log.png'
 import { FcGoogle } from 'react-icons/fc';
 import useAuth from '../../Hooks/useAuth';
 import toast, { Toaster } from 'react-hot-toast';

@@ -224,7 +224,7 @@ const NavBar = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="bookedservice"
+                          to="/bookedservice"
                           className={({ isActive }) =>
                             isActive
                               ? "font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"

@@ -12,6 +12,7 @@ import ProviderViewDeatils from "../Pages/ProviderViewDeatils";
 import ManageService from "../Pages/ManageService";
 import ErrorPage from "../Pages/ErrorPage";
 import UpdateProviderForm from "../Pages/UpdateProviderForm";
+import BookedService from "../Pages/BookedService";
 
 const router = createBrowserRouter([
   {
@@ -86,6 +87,14 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/allServiceProvider/${params.id}`),
+      },
+      {
+        path: "/bookedservice",
+        element: (
+          <PrivateRoute>
+            <BookedService />
+          </PrivateRoute>
+        ),
       },
     ],
   },
