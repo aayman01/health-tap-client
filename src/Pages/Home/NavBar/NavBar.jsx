@@ -293,7 +293,7 @@ const NavBar = () => {
                   <li>
                     <button
                       onClick={handleLogOut}
-                      className="font-medium p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
+                      className="font-semibold p-2 hover:bg-[#4844bc] text-[#ff7404] hover:text-white"
                     >
                       Logout
                     </button>

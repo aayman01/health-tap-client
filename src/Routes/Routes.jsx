@@ -11,12 +11,13 @@ import AddServices from "../Pages/AddServices";
 import ProviderViewDeatils from "../Pages/ProviderViewDeatils";
 import ManageService from "../Pages/ManageService";
 import ErrorPage from "../Pages/ErrorPage";
+import UpdateProviderForm from "../Pages/UpdateProviderForm";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -75,6 +76,16 @@ const router = createBrowserRouter([
             <ManageService />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/updateprovider/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateProviderForm />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allServiceProvider/${params.id}`),
       },
     ],
   },

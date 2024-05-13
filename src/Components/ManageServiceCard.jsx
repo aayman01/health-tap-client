@@ -1,6 +1,7 @@
 import axios from "axios";
 import PropTypes from "prop-types";
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ManageServiceCard = ({ service, setMyService, myService }) => {
@@ -74,7 +75,9 @@ const ManageServiceCard = ({ service, setMyService, myService }) => {
           </a>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn btn-main hover:bg-[#ff7404]">Update</button>
+          <Link to={`/updateprovider/${_id}`}>
+            <button className="btn btn-main hover:bg-[#ff7404]">Update</button>
+          </Link>
           <button onClick={() => handleDelete(_id)} className="btn btn-warning">
             Delete
           </button>

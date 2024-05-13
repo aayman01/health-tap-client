@@ -86,8 +86,6 @@ const AddServices = () => {
                     <select
                       className="px-4 py-3 rounded-md border w-full"
                       name="serviceName"
-                      value={"Select your service name"}
-                      defaultValue={"Select your service name"}
                       required
                     >
                       <option value="Dermatology">Dermatology</option>
