@@ -2,6 +2,7 @@ import axios from "axios";
 import useAuth from "../Hooks/useAuth";
 import NavBar from "./Home/NavBar/NavBar";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 // import { useNavigate } from "react-router-dom";
 
 const AddServices = () => {
@@ -51,6 +52,9 @@ const AddServices = () => {
     }
     return (
       <div>
+        <Helmet>
+          <title>HealthTap | Add Service</title>
+        </Helmet>
         <div className="h-20">
           <NavBar />
         </div>

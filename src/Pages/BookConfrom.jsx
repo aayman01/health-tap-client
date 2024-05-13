@@ -3,6 +3,7 @@ import NavBar from "./Home/NavBar/NavBar";
 import useAuth from "../Hooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const BookConfrom = () => {
     const lodedData = useLoaderData();
@@ -57,6 +58,9 @@ const BookConfrom = () => {
 
     return (
       <div>
+        <Helmet>
+          <title>HealthTap | Book Confirm</title>
+        </Helmet>
         <div className="h-20">
           <NavBar />
         </div>

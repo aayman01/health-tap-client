@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import NavBar from "./Home/NavBar/NavBar";
 import ManageServiceCard from "../Components/ManageServiceCard";
+import { Helmet } from "react-helmet-async";
 
 const ManageService = () => {
   const { user } = useAuth();
@@ -20,6 +21,9 @@ const ManageService = () => {
   }, [user]);
   return (
     <div>
+      <Helmet>
+        <title>HealthTap | Manage Service</title>
+      </Helmet>
       <div className="h-20">
         <NavBar />
       </div>

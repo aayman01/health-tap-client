@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import NavBar from "./Home/NavBar/NavBar";
 import AllServiceCard from "../Components/AllServiceCard";
+import { Helmet } from "react-helmet-async";
 
 const AllServices = () => {
   const [allService, setAllService] = useState([]);
@@ -13,6 +14,9 @@ const AllServices = () => {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>HealthTap | All Services</title>
+      </Helmet>
       <div className="h-20">
         <NavBar />
       </div>

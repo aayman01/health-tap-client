@@ -1,11 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import NavBar from "./Home/NavBar/NavBar";
 import { VscDebugBreakpointData } from "react-icons/vsc";
+import { Helmet } from "react-helmet-async";
 
 const ProviderViewDeatils = () => {
      const allData = useLoaderData();
     return (
       <div>
+        <Helmet>
+          <title>HealthTap | View Deatils</title>
+        </Helmet>
         <div className="h-20">
           <NavBar />
         </div>

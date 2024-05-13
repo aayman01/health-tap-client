@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import NavBar from "./Home/NavBar/NavBar";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProviderForm = () => {
     const data = useLoaderData(); 
@@ -48,6 +49,9 @@ const UpdateProviderForm = () => {
     }
     return (
       <div>
+        <Helmet>
+          <title>HealthTap | Update Information</title>
+        </Helmet>
         <div>
           <div className="h-20">
             <NavBar />

@@ -15,7 +15,7 @@ const AllServiceCard = ({ service }) => {
     serviceLocation,
   } = service;
   return (
-    <div className="overflow-hidden bg-inherit rounded-lg shadow-xl">
+    <div className="overflow-hidden bg-inherit border mb-7 rounded-lg shadow-xl">
       <div className="flex items-center gap-6">
         <div className="">
           <img
