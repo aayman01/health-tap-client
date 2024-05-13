@@ -30,7 +30,7 @@ const ManageService = () => {
       <div className="max-w-6xl mx-auto px-4 my-20">
         {empty ? (
           <div className="flex justify-center items-center h-screen-minus-20px">
-            <h2 className="text-4xl font-bold text-center">{empty}</h2>
+            <h2 className="text-4xl font-bold text-center text-second">{empty}</h2>
           </div>
         ) : (
           <div>
