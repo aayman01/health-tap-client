@@ -21,6 +21,10 @@
     border: none;
 }
 
+.h-screen-minus-20px {
+    height: calc(100vh - 200px);
+ }
+
 body{
     font-family: "Lato",sans-serif;
 }

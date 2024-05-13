@@ -132,8 +132,10 @@ const AddServices = () => {
                   </div>
                   <textarea
                     placeholder="Description"
+                    rows={5}
                     className="textarea textarea-lg textarea-bordered w-full"
                     name="description"
+                    required
                   ></textarea>
                 </label>
                 <input

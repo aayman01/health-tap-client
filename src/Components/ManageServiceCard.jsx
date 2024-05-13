@@ -14,6 +14,7 @@ const ManageServiceCard = ({ service, setMyService, myService }) => {
     serviceProviderName,
     servicePrice,
     serviceLocation,
+    serviceProviderEmail,
   } = service;
 
   const handleDelete = (id) => {
@@ -53,6 +54,21 @@ const ManageServiceCard = ({ service, setMyService, myService }) => {
         <p className="mt-2 text-sm text-gray-400">
           {description.slice(0, 100)}...
         </p>
+        <div className="flex items-center justify-between my-3">
+          <div>
+            <a href="#" className=" font-medium text-gray-700" role="link">
+              Provider Name:{serviceProviderName}
+            </a>
+            <p>Email:{serviceProviderEmail}</p>
+          </div>
+          <div>
+            <img
+              className="object-cover h-10 rounded-full"
+              src={serviceProviderImage}
+              alt="Avatar"
+            />
+          </div>
+        </div>
         <div className="flex items-center justify-between">
           <p className="flex font-semibold items-center gap-1 text-base uppercase">
             <CiLocationOn />
@@ -64,16 +80,7 @@ const ManageServiceCard = ({ service, setMyService, myService }) => {
             </p>
           </div>
         </div>
-        <div className="flex items-center">
-          <img
-            className="object-cover h-10 rounded-full"
-            src={serviceProviderImage}
-            alt="Avatar"
-          />
-          <a href="#" className="mx-2 font-semibold text-gray-700" role="link">
-            {serviceProviderName}
-          </a>
-        </div>
+
         <div className="card-actions justify-end">
           <Link to={`/updateprovider/${_id}`}>
             <button className="btn btn-main hover:bg-[#ff7404]">Update</button>

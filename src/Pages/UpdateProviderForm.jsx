@@ -1,9 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import NavBar from "./Home/NavBar/NavBar";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const UpdateProviderForm = () => {
     const data = useLoaderData(); 
-    console.log(data)
+    // console.log(data)
+    const navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -15,6 +18,7 @@ const UpdateProviderForm = () => {
         const description = form.description.value;
         const serviceProviderName = form.serviceProviderName.value;
         const serviceProviderEmail = form.serviceProviderEmail.value;
+        const serviceProviderImage = form.serviceProviderPhotoUrl.value; 
 
         const formInfo = {
           serviceImage,
@@ -24,8 +28,22 @@ const UpdateProviderForm = () => {
           description,
           serviceProviderName,
           serviceProviderEmail,
+          serviceProviderImage
         };
         console.log(formInfo)
+        axios
+          .put(`http://localhost:5000/service/${data[0]._id}`, formInfo)
+          .then((res) => {
+            const result = res.data;
+            if (result.modifiedCount > 0) {
+              Swal.fire({
+                text: "Updated Succesfully",
+                icon: "success",
+              });
+              navigate("/manageservice");
+            }
+            console.log(result);
+          });
 
     }
     return (
@@ -51,6 +69,7 @@ const UpdateProviderForm = () => {
                       <input
                         type="text"
                         name="serviceImage"
+                        defaultValue={data[0].serviceImage}
                         placeholder="Service image url"
                         className="input input-bordered w-full "
                         required
@@ -63,21 +82,14 @@ const UpdateProviderForm = () => {
                           Service Name:
                         </span>
                       </div>
-                      <select
-                        className="px-4 py-3 rounded-md border w-full"
+                      <input
+                        type="text"
                         name="serviceName"
+                        defaultValue={data[0].serviceName}
+                        placeholder="Service Name"
+                        className="input input-bordered w-full "
                         required
-                      >
-                        <option value="Dermatology">Dermatology</option>
-                        <option value="Cardiology">Cardiology</option>
-                        <option value="Pediatrics">Pediatrics</option>
-                        <option value="Orthopedics">Orthopedics</option>
-                        <option value="Neurology">Neurology</option>
-                        <option value="Gastroenterology">
-                          Gastroenterology
-                        </option>
-                        <option value="Mental Health">Mental Health</option>
-                      </select>
+                      />
                     </label>
                   </div>
                   <div className="md:flex items-center gap-4">
@@ -90,6 +102,7 @@ const UpdateProviderForm = () => {
                       <input
                         type="text"
                         name="serviceProviderName"
+                        defaultValue={data[0].serviceProviderName}
                         placeholder="Price"
                         className="input input-bordered w-full"
                         required
@@ -104,6 +117,7 @@ const UpdateProviderForm = () => {
                       <input
                         type="text"
                         name="serviceProviderEmail"
+                        defaultValue={data[0].serviceProviderEmail}
                         placeholder="Service Provider Email"
                         className="input input-bordered w-full"
                         required
@@ -119,6 +133,7 @@ const UpdateProviderForm = () => {
                     <input
                       type="text"
                       name="serviceProviderPhotoUrl"
+                      defaultValue={data[0].serviceProviderImage}
                       placeholder="Service Provider Photo Url"
                       className="input input-bordered w-full"
                       required
@@ -132,6 +147,7 @@ const UpdateProviderForm = () => {
                       <input
                         type="text"
                         name="servicePrice"
+                        defaultValue={data[0].servicePrice}
                         placeholder="Price"
                         className="input input-bordered w-full"
                         required
@@ -147,6 +163,7 @@ const UpdateProviderForm = () => {
                         type="text"
                         name="area"
                         placeholder="Service Area"
+                        defaultValue={data[0].serviceLocation}
                         className="input input-bordered w-full"
                         required
                       />
@@ -158,8 +175,11 @@ const UpdateProviderForm = () => {
                     </div>
                     <textarea
                       placeholder="Description"
+                      defaultValue={data[0].description}
+                      rows={5}
                       className="textarea textarea-lg textarea-bordered w-full"
                       name="description"
+                      required
                     ></textarea>
                   </label>
                   <input
