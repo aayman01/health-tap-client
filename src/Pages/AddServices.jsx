@@ -59,12 +59,12 @@ const AddServices = () => {
           <NavBar />
         </div>
         <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-[#fed938] p-20 rounded-lg mt-10 mb-14">
+          <div className="bg-[#fed938] p-5 md:p-20 rounded-lg mt-10 mb-14">
             <h2 className="text-3xl text-center mb-7 text-[#ff7404] font-bold">
               Add Service
             </h2>
             <div className="">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit}>    
                 <div className="md:flex items-center gap-4">
                   <label className="form-control md:w-1/2">
                     <div className="label">

@@ -58,16 +58,18 @@ const BookedService = () => {
                   <td>{format(new Date(service?.date), "d MMMM,yyyy")}</td>
                   <td className="uppercase">{service?.area}</td>
                   <td>{service?.price}</td>
-                  <td
-                    className={`inline-flex items-center font-bold`}
-                  >
+                  <td className={`inline-flex items-center font-bold`}>
                     <p
                       className={`px-2 py-1 rounded-lg ${
-                        service?.serviceStatus === "pending" &&
+                        service?.serviceStatus === "Pending" &&
                         " text-yellow-500 font-bold bg-yellow-100/60"
                       } ${
-                        service?.serviceStatus === "working" &&
+                        service?.serviceStatus === "Working" &&
                         "bg-blue-100/60 text-blue-500"
+                      }
+                      ${
+                        service?.serviceStatus === "Complete" &&
+                        "bg-emerald-100/60 text-emerald-500"
                       }`}
                     >
                       {service?.serviceStatus}

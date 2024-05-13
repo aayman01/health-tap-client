@@ -24,7 +24,7 @@ const BookConfrom = () => {
         const date = form.date.value;
         const area = form.area.value;
         const price = form.price.value;
-        const serviceStatus = "pending"
+        const serviceStatus = "Pending"
         const data = {
           serviceName,
           serviceId,
