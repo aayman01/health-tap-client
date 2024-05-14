@@ -13,7 +13,7 @@ const OurSpecalist = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-28">
-          <div className="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl border">
             <figure>
               <img src={img1} alt="doctor" />
             </figure>
@@ -24,7 +24,7 @@ const OurSpecalist = () => {
               <p className="text-second font-bold">Specialty: Dermatology</p>
             </div>
           </div>
-          <div className="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl border">
             <figure>
               <img src={img2} alt="doctor" />
             </figure>
@@ -33,7 +33,7 @@ const OurSpecalist = () => {
               <p className="text-second font-bold">Specialty: Cardiology</p>
             </div>
           </div>
-          <div className="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl border">
             <figure>
               <img src={img3} alt="doctor" />
             </figure>
@@ -42,7 +42,7 @@ const OurSpecalist = () => {
               <p className="text-second font-bold">Specialty: Orthopedics</p>
             </div>
           </div>
-          <div className="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl border">
             <figure>
               <img src={img4} alt="doctor" />
             </figure>
@@ -55,7 +55,7 @@ const OurSpecalist = () => {
               </p>
             </div>
           </div>
-          <div className="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl border">
             <figure>
               <img src={img5} alt="doctor" />
             </figure>
@@ -64,7 +64,7 @@ const OurSpecalist = () => {
               <p className="text-second font-bold">Specialty: Pediatrics</p>
             </div>
           </div>
-          <div className="card card-compact bg-base-100 shadow-xl">
+          <div className="card card-compact bg-base-100 shadow-xl border">
             <figure>
               <img src={img6} alt="doctor" />
             </figure>

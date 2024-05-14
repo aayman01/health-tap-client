@@ -15,7 +15,7 @@ const ServiceToDo = () => {
   ];
 
 //   useEffect(() => {
-//     axios.get("http://localhost:5000/bookedService").then((res) => {
+//     axios.get("https://health-tap-server.vercel.app/bookedService").then((res) => {
 //       setBookedService(res.data);
 //       if (res.data.length === 0) {
 //         setEmpty("Anyone haven't booked any of our service yet...");
@@ -26,7 +26,7 @@ const ServiceToDo = () => {
     getData();
   }, []);
   const getData = async () => {
-    axios.get("http://localhost:5000/bookedService").then((res) => {
+    axios.get("https://health-tap-server.vercel.app/bookedService").then((res) => {
       setBookedService(res.data);
       if (res.data.length === 0) {
         setEmpty("Anyone haven't booked any of our service yet...");
@@ -36,7 +36,7 @@ const ServiceToDo = () => {
 
   const handleChange = (value,id) => {
     axios
-      .patch(`http://localhost:5000/updateservice/${id}`, {
+      .patch(`https://health-tap-server.vercel.app/updateservice/${id}`, {
         value
       })
       .then((res) => {

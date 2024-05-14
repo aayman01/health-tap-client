@@ -2,7 +2,7 @@
 const Faq = () => {
     return (
       <div className="max-w-6xl mx-auto px-4 my-24">
-        <section className="bg-white border-2 rounded-lg">
+        <section className="bg-inherit border-2 rounded-lg">
           <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
             <h2 className="text-2xl font-semibold sm:text-4xl my-5 mb-7">
               Frequently Asked Questions

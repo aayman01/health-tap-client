@@ -12,7 +12,7 @@ const AllServices = () => {
   useEffect(()=>{
     const getData = async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/allServiceProvider?search=${search}`
+        `https://health-tap-server.vercel.app/allServiceProvider?search=${search}`
       );
       setAllService(data)
     }

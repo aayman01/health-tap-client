@@ -7,7 +7,7 @@ const PopularService = () => {
     // console.log(services)
     useEffect(()=>{
         axios
-          .get("http://localhost:5000/services")
+          .get("https://health-tap-server.vercel.app/services")
           .then((res) => {
             setServices(res.data)
           });

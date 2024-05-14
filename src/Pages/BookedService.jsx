@@ -13,7 +13,7 @@ const BookedService = () => {
   console.log(bookedService);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/bookedService/${user.email}`)
+      .get(`https://health-tap-server.vercel.app/bookedService/${user.email}`)
       .then((res) => {
         setBookedService(res.data);
         if (res.data.length === 0) {

@@ -53,13 +53,13 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://health-tap-server.vercel.app/services/${params.id}`),
       },
       {
         path: "/bookconfirm/:id",
         element: <BookConfrom />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/services/${params.id}`),
+          fetch(`https://health-tap-server.vercel.app/services/${params.id}`),
       },
       {
         path: "/providerViewDeatils/:id",
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allServiceProvider/${params.id}`),
+          fetch(`https://health-tap-server.vercel.app/allServiceProvider/${params.id}`),
       },
       {
         path: "/manageservice",
@@ -87,7 +87,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allServiceProvider/${params.id}`),
+          fetch(`https://health-tap-server.vercel.app/allServiceProvider/${params.id}`),
       },
       {
         path: "/bookedservice",

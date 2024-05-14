@@ -33,7 +33,7 @@ const UpdateProviderForm = () => {
         };
         console.log(formInfo)
         axios
-          .put(`http://localhost:5000/service/${data[0]._id}`, formInfo)
+          .put(`https://health-tap-server.vercel.app/service/${data[0]._id}`, formInfo)
           .then((res) => {
             const result = res.data;
             if (result.modifiedCount > 0) {

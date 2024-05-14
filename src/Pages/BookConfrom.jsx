@@ -41,7 +41,7 @@ const BookConfrom = () => {
 
         console.log(data)
 
-        axios.post("http://localhost:5000/bookedservice",data)
+        axios.post("https://health-tap-server.vercel.app/bookedservice",data)
         .then(res => {
             const data = res.data;
             if(data.insertedId){

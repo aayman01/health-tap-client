@@ -11,7 +11,7 @@ const ManageService = () => {
   const [empty, setEmpty] = useState("");
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/data/${user?.email}`).then((res) => {
+    axios.get(`https://health-tap-server.vercel.app/data/${user?.email}`).then((res) => {
       const data = res.data;
       setMyService(data);
       if (data.length === 0) {

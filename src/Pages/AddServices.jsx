@@ -35,7 +35,7 @@ const AddServices = () => {
 
         // console.log(data);
 
-        axios.post("http://localhost:5000/serviceProvider",data)
+        axios.post("https://health-tap-server.vercel.app/serviceProvider",data)
         .then(res => {
           const data = res.data;
           if (data.insertedId) {
