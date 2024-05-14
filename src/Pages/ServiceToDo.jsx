@@ -91,7 +91,18 @@ const ServiceToDo = () => {
                       <td>{service?.providerName}</td>
                       <td>{format(new Date(service?.date), "d MMMM,yyyy")}</td>
                       <td>{service?.price}</td>
-                      <td className={` font-bold`}>
+                      <td
+                        className={`font-bold ${
+                          service?.serviceStatus === "Pending" &&
+                          "text-yellow-500"
+                        } ${
+                          service?.serviceStatus === "Working" &&
+                          "text-blue-500"
+                        } ${
+                          service?.serviceStatus === "Completed" &&
+                          "text-emerald-500"
+                        }`}
+                      >
                         {service?.serviceStatus}
                       </td>
                       <td>

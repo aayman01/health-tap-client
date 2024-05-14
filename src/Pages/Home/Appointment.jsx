@@ -4,7 +4,7 @@ const Appointment = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 my-16">
       <div className="md:flex items-center justify-between gap-6">
-        <section className="p-6 bg-white rounded-md shadow-2xl bg-inherit">
+        <section className="p-6 rounded-md shadow-2xl bg-inherit">
           <h2 className="text-5xl font-bold text-primary mb-4">
             Make an Appointment
           </h2>

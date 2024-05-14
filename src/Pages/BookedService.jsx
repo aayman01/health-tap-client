@@ -74,7 +74,7 @@ const BookedService = () => {
                             "bg-blue-100/60 text-blue-500"
                           }
                       ${
-                        service?.serviceStatus === "Complete" &&
+                        service?.serviceStatus === "Completed" &&
                         "bg-emerald-100/60 text-emerald-500"
                       }`}
                         >

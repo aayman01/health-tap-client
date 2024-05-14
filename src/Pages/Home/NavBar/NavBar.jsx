@@ -40,7 +40,7 @@ const NavBar = () => {
     .catch()
   }
     return (
-      <div className="max-7xl mx-auto">
+      <div className="max-6xl mx-auto">
         {/* #4844bc #ff7404 */}
         <div
           className={
@@ -96,7 +96,7 @@ const NavBar = () => {
                         : "text-[#4844bc] text-base font-medium"
                     }
                   >
-                    All Services
+                    Services
                   </NavLink>
                 </li>
                 {user && (
@@ -188,7 +188,7 @@ const NavBar = () => {
                       : "text-[#4844bc] text-base font-medium"
                   }
                 >
-                  All Services
+                  Services
                 </NavLink>
               </li>
               <li>
