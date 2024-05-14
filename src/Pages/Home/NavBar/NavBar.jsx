@@ -96,7 +96,7 @@ const NavBar = () => {
                         : "text-[#4844bc] text-base font-medium"
                     }
                   >
-                    Services
+                    All Services
                   </NavLink>
                 </li>
                 {user && (
@@ -188,7 +188,7 @@ const NavBar = () => {
                       : "text-[#4844bc] text-base font-medium"
                   }
                 >
-                  Services
+                  All Services
                 </NavLink>
               </li>
               <li>

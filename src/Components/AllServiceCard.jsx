@@ -33,13 +33,13 @@ const AllServiceCard = ({ service }) => {
                   src={serviceProviderImage}
                   alt="Avatar"
                 />
-                <a
+                <h2
                   href="#"
                   className="mx-2 font-semibold text-gray-700"
                   role="link"
                 >
                   {serviceProviderName}
-                </a>
+                </h2>
               </div>
               <div className="">
                 <p className="text-end font-bold bg-[#ff7404] p-2 rounded-md text-white">

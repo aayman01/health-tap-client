@@ -12,12 +12,12 @@ const AllServices = () => {
   useEffect(()=>{
     const getData = async () => {
       const { data } = await axios.get(
-        "http://localhost:5000/allServiceProvider"
-      )
+        `http://localhost:5000/allServiceProvider?search=${search}`
+      );
       setAllService(data)
     }
     getData()
-  },[])
+  },[search])
 
   const handleSearch = e => {
     e.preventDefault();
@@ -39,7 +39,7 @@ const AllServices = () => {
           </h2>
           <div>
             <form onSubmit={handleSearch}>
-              <div className="flex items-center justify-end">
+              <div className="flex items-center justify-end mb-10">
                 <input
                   type="text"
                   name="search"
