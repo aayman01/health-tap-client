@@ -81,7 +81,7 @@ const ManageServiceCard = ({ service, setMyService, myService }) => {
           </div>
         </div>
 
-        <div className="card-actions justify-end">
+        <div className="card-actions justify-start">
           <Link to={`/updateprovider/${_id}`}>
             <button className="btn btn-main hover:bg-[#ff7404]">Update</button>
           </Link>

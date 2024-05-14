@@ -13,6 +13,7 @@ import ManageService from "../Pages/ManageService";
 import ErrorPage from "../Pages/ErrorPage";
 import UpdateProviderForm from "../Pages/UpdateProviderForm";
 import BookedService from "../Pages/BookedService";
+import ServiceToDo from "../Pages/ServiceToDo";
 
 const router = createBrowserRouter([
   {
@@ -93,6 +94,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <BookedService />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/servicetodo",
+        element: (
+          <PrivateRoute>
+            <ServiceToDo />
           </PrivateRoute>
         ),
       },
