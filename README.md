@@ -2,6 +2,11 @@
 
 # Live link: https://health-tap-3d23f.web.app
 
+##Clone my project
+- download on your computer first
+- Install Dependencies: npm i
+- Deploy it on the local host: npm run dev
+
 ## Category
 - Consultation Services by Doctors
 
