@@ -1,8 +1,23 @@
-# React + Vite
+# Website name: HealthTap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Live link: https://health-tap-3d23f.web.app
 
-Currently, two official plugins are available:
+## Category
+- Consultation Services by Doctors
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **User-Friendly Booking System**: Schedule appointments with just a few clicks.
+- **Licensed and Experienced Doctors**: Consult with board-certified professionals.
+- **Wide Range of Specialties**: Access services in general medicine, dermatology, mental health, paediatrics, orthopaedics, cardiology, and more.
+- **Secure and Confidential**: Your personal and medical information is protected with industry-standard encryption.
+
+
+- **Responsive**: The website is designed to be responsive, ensuring optimal viewing experience across various devices including desktops, tablets, and smartphones.
+
+## npm package used
+
+- lottie-react
+- date-fns
+- axios
+
